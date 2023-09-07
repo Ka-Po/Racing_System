@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://xstjrjrbdq0b"]
+
+[ext_resource type="Texture2D" uid="uid://clja8lth8rqyo" path="res://pic1.jpg" id="1_ubifq"]
+[ext_resource type="Script" path="res://Timer.gd" id="2_tawwe"]
+[ext_resource type="FontFile" uid="uid://bc55o4w2pnwi6" path="res://Roboto-Bold.ttf" id="3_gq254"]
+
+[node name="Scene1" type="Node3D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ubifq")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Timer" type="Timer" parent="CanvasLayer"]
+script = ExtResource("2_tawwe")
+
+[node name="Label" type="Label" parent="CanvasLayer/Timer"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_right = 40.0
+offset_bottom = 11.5
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_gq254")
+text = "0"
+
+[connection signal="timeout" from="CanvasLayer/Timer" to="CanvasLayer/Timer" method="_on_timeout"]

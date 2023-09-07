@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://6h2pcaecj5sr"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_hvr50"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_erfp1"]
+albedo_color = Color(0.560784, 0.862745, 0.976471, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2ggdy"]
+
+[node name="RigidBody3D2" type="RigidBody3D"]
+gravity_scale = 2.66454e-15
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_hvr50")
+surface_material_override/0 = SubResource("StandardMaterial3D_erfp1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_2ggdy")
+
+[node name="Marker3D" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.5, 2.08165e-12)
