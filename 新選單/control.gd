@@ -80,16 +80,6 @@ func _physics_process(delta):
 			bg_Music[bg_Music_No].volume_db = 0
 	
 	print("fading_volume db:",bg_Music[bg_Music_No].volume_db)
-#	if fading == true:
-#		if bg_Music[bg_Music_No].volume_db >-60:
-#			bg_Music[bg_Music_No].volume_db -= 30*delta
-#		if bg_Music[bg_Music_No].volume_db == -60:
-#			bg_Music[bg_Music_No].volume_db = -60
-#	else :
-#		if bg_Music[bg_Music_No].volume_db < 0:
-#			bg_Music[bg_Music_No].volume_db += 30*delta
-#		if bg_Music[bg_Music_No].volume_db == 0:
-#			bg_Music[bg_Music_No].volume_db = 0
 	
 	pass
 
